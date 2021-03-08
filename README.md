@@ -4,11 +4,15 @@
 
 ## Installation
 Make sure you have pip and python
+<br>
 `python -v`
+<br>
 `pip -v`
 
+<br>
+
 Install the package 
-`pip install [woolang-project-generator](https://pypi.org/project/woolang-project-generator/)`
+`pip install woolang-project-generator`
 
 ## How to use it
 
