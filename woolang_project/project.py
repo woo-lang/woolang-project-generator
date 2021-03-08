@@ -4,7 +4,7 @@ from lol.prompt import Prompt
 from clint.textui import colored as Color
 from woolang_project.exception import FileNotFoundException
 
-
+# throw a sucess message
 def throw_success_message(message):
     print(Color.green(f"SUCCESS:{message}"))
 
@@ -20,6 +20,13 @@ class Project():
         self.create_all_directories(self.directory)
 
     def create_all_directories(self, directory):
+        """
+        Creating the directory tree
+
+        Creating directories(create_folders)
+        and woolang files along with config 
+        files
+        """
         create_folders = [
             os.path.join(directory, "src"),
             os.path.join(directory, "test")
@@ -39,6 +46,7 @@ class Project():
             throw_success_message(f"[{index}] Created {filename}")
 
     def write_to_file(self, filename, file_content):
+        """Write informatiion to the file"""
         with open(filename, "w") as file_writer:
             file_writer.write(file_content)
 
@@ -73,6 +81,12 @@ class Project():
         return project_info_solutions
 
     def create_project_directory(self, project_name):
+        """
+        Creating the project directory
+        based on the project name
+
+        [name / .]
+        """
         if project_name == ".":
             project_dir = os.getcwd()
         else:
