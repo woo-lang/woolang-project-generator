@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 
-DEPENDENCIES = ["lol", "clint"]
+DEPENDENCIES = ["loldb", "clint"]
 
 
 setuptools.setup(
