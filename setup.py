@@ -14,7 +14,7 @@ DEPENDENCIES = ["lol", "clint"]
 
 setuptools.setup(
     name="woolang-project-generator",  # Replace with your own username
-    version="1.0.0",
+    version="2.0.0",
     author="P Pranav Baburaj",
     author_email="code-roller@googlegroups.com",
     description="A project generator for woolng",
