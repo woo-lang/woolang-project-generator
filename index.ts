@@ -1,4 +1,4 @@
-import { WoolangProjectException } from './exception/exception'
-import { WoolangProject } from './project/project'
+import {WoolangProjectException} from './exception/exception';
+import {WoolangProject} from './project/project';
 
-export { WoolangProject, WoolangProjectException }
+export {WoolangProject, WoolangProjectException};
