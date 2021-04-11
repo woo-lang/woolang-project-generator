@@ -2,16 +2,16 @@
 
 > This is a part of [woolang](https://github.com/woo-lang/woolang)
 
-## Installation
- 
-`pip install woolang-project-generator`
-
 ## How to use it
 
-```python
-from woolang_project.project import Project
+```js
+import {WoolangProject} from '../project/project';
 
-project = Project()
+const generator = new WoolangProject('folder', {
+  directories: [],
+  files: new Map<string, string>([['test', 'Testing']]),
+}).createWoolangProject();
+
 ```
 
 <hr>
