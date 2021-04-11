@@ -10,7 +10,7 @@ export class WoolangProjectException {
         this.message = message
         this.suggestion = suggestion
         this.type = type
-        this.lineNumber = lineNumber == null ? `` : `at ${lineNumber}`
+        this.lineNumber = lineNumber == null ? `` : `Error at line ${lineNumber}`
     }
 
     public evokeWoolangException = ():void => {

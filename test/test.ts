@@ -1,6 +1,8 @@
 import { WoolangProject } from "../project/project";
 
-const generator = new WoolangProject("r", {
+const generator = new WoolangProject("folder", {
     directories : [],
-    files : []
+    files : new Map<string, string>([
+        ["test", "Testing"]
+    ])
 }).createWoolangProject()
