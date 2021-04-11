@@ -14,6 +14,14 @@ export class WoolangProject {
     private readonly directories:Array<string>
     private readonly files:Map<string, string>
 
+    /**
+     * @constructor
+     * 
+     * @param name The name of the project
+     * @param project The information about the project
+     * like the directories and files to create along
+     * with the project directory
+     */
     constructor(name:string, project:Project){
         this.name = name
         this.path = this.determineDirectoryPath(this.name)
@@ -21,10 +29,27 @@ export class WoolangProject {
         this.files = project.files
     }
 
+    /**
+     * @private
+     * 
+     * Determine the path of the directory with the
+     * name of the project
+     * 
+     * @param {string} path The name of the project
+     * @returns {string} The path of he project
+     */
     private determineDirectoryPath = (path:string):string => {
         return path == "." ? cwd() : join(cwd(), this.name)
     }
 
+    /**
+     * @public
+     * 
+     * Create the files and folders related to
+     * the project
+     * 
+     * @returns {void | null}
+     */
     public createWoolangProject():void | null {
         if(this.fileExists(this.path)){
             if(lstatSync(this.path).isDirectory()){
@@ -85,6 +110,14 @@ export class WoolangProject {
 
     }
 
+    /**
+     * @private
+     * 
+     * Check if a specific path exists or not
+     * 
+     * @param {string} path The path to check the existence
+     * @returns {boolean}
+     */
     private fileExists = (path:string):boolean => {
         try {
             return existsSync(path)
