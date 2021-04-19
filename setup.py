@@ -7,8 +7,8 @@ DEPENDENCIES = []
 
 
 setuptools.setup(
-    name="woolang-project-generator",  # Replace with your own username
-    version="3.0.0",
+    name="project-generator",  # Replace with your own username
+    version="1.0.0",
     author="P Pranav Baburaj",
     author_email="code-roller@googlegroups.com",
     description=
