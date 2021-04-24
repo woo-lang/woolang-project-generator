@@ -1,6 +1,7 @@
 import os
 
 
+
 class ProjectFiles(object):
     def __init__(self, files, folders):
         assert isinstance(files, dict), "Files expected to be a dict"
