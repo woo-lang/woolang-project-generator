@@ -4,13 +4,15 @@
 
 ## How to use it
 
-```js
-import {WoolangProject} from '../project/project';
+```py
+from context import Project, ProjectFiles
 
-const generator = new WoolangProject('folder', {
-  directories: [],
-  files: new Map<string, string>([['test', 'Testing']]),
-}).createWoolangProject();
+project = Project("t", ProjectFiles(
+    {
+        "hello" : "frfefe"
+    },
+    ["data"]
+)).create()
 
 ```
 
